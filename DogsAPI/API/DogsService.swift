@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol DogsService {
+protocol DogsService {
     func getBreeds(completion: @escaping (Result<[Breed], Error>) -> Void)
     func getImageURLs(breed: Breed, completion: @escaping (Result<[URL], Error>) -> Void)
 }

@@ -11,7 +11,7 @@ enum HttpDogsServiceError: Error {
     case noData
 }
 
-public class HttpDogsService: DogsService {
+class HttpDogsService: DogsService {
     private let baseURL = {
         guard let url = URL(string: "https://dog.ceo/api") else {
             fatalError("invalid base url")
@@ -20,9 +20,6 @@ public class HttpDogsService: DogsService {
     }()
 
     private lazy var breedsURL = baseURL.appendingPathComponent("breeds/list/all")
-    
-    public init() { }
-    
     private func breedImagesURL(breed: Breed) -> URL {
         baseURL.appendingPathComponent("breed/\(breed.name)/images")
     }
@@ -30,7 +27,7 @@ public class HttpDogsService: DogsService {
         baseURL.appendingPathComponent("breed/\(breed.name)/images/random")
     }
 
-    public func getBreeds(completion: @escaping (Result<[Breed], Error>) -> Void) {
+    func getBreeds(completion: @escaping (Result<[Breed], Error>) -> Void) {
         get(url: breedsURL) { (result: Result<ListBreedsResponse, Error>) in
             completion(
                 result.map { requestResponse in
@@ -40,7 +37,7 @@ public class HttpDogsService: DogsService {
         }
     }
 
-    public func getImageURLs(breed: Breed, completion: @escaping (Result<[URL], Error>) -> Void) {
+    func getImageURLs(breed: Breed, completion: @escaping (Result<[URL], Error>) -> Void) {
         get(url: breedImagesURL(breed: breed)) { (result: Result<BreedImagesResponse, Error>) in
             completion(
                 result.map { requestResponse in
@@ -50,7 +47,7 @@ public class HttpDogsService: DogsService {
         }
     }
 
-    public func getRandomImageURL(breed: Breed, completion: @escaping (Result<URL, Error>) -> Void) {
+    func getRandomImageURL(breed: Breed, completion: @escaping (Result<URL, Error>) -> Void) {
         get(url: breedRandomImageURL(breed: breed)) { (result: Result<BreedRandomImageResponse, Error>) in
             completion(
                 result.map { requestResponse in

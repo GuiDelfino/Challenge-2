@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Challenge-2
+//  Dogs
 //
-//  Created by Rafael Rodrigues on 24/01/24.
+//  Created by André Rodrigues on 22/01/24.
 //
 
 import UIKit
