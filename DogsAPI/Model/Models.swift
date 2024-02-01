@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Breed {
+public struct Breed {
     let name: String
 }
 
-struct BreedImages {
+public struct BreedImages {
     let imageURLs: [URL]
 }

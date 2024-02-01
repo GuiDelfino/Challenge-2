@@ -87,3 +87,14 @@ class HttpDogsService: DogsService {
         dataTask.resume()
     }
 }
+
+extension [Breed] {
+    init(response: ListBreedsResponse) {
+        self = response.message
+            .filter { _, value in
+                value.isEmpty
+            }
+            .map(\.key)
+            .map(Breed.init(name:))
+    }
+}
