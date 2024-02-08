@@ -9,6 +9,7 @@ import Foundation
 
 enum HttpDogsServiceError: Error {
     case noData
+    case noResult
 }
 
 class HttpDogsService: DogsService {
@@ -67,16 +68,27 @@ class HttpDogsService: DogsService {
                 let requestResponse = try data.map {
                     try jsonDecoder.decode(T.self, from: $0)
                 }
-
-                let result: Result<T, Error> = switch (requestResponse, error) {
+                var result: Result<T, Error>?
+                switch (requestResponse, error) {
                 case (let requestResponse?, nil):
-                    .success(requestResponse)
+                        result = .success(requestResponse)
                 case (nil, let error?):
-                    .failure(error)
+                        result = .failure(error)
                 default:
-                    .failure(HttpDogsServiceError.noData)
+                        result = .failure(HttpDogsServiceError.noData)
                 }
-
+//                let result: Result<T, Error> = switch (requestResponse, error) {
+//                case (let requestResponse?, nil):
+//                    .success(requestResponse)
+//                case (nil, let error?):
+//                    .failure(error)
+//                default:
+//                    .failure(HttpDogsServiceError.noData)
+//                }
+                guard let result = result else {
+                    completion(.failure(HttpDogsServiceError.noResult))
+                    return
+                }
                 completion(result)
 
             } catch {

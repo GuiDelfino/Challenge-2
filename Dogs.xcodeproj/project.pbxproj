@@ -18,6 +18,8 @@
 		BADC82D12B5F0E4C00B9A397 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC82D02B5F0E4C00B9A397 /* Models.swift */; };
 		BADC82D32B5F147C00B9A397 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC82D22B5F147C00B9A397 /* Responses.swift */; };
 		BADC82D52B5F148C00B9A397 /* HttpDogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC82D42B5F148C00B9A397 /* HttpDogsService.swift */; };
+		FF1263272B739A3A00ACFDDA /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1263262B739A3A00ACFDDA /* ChallengeView.swift */; };
+		FF2C6B122B7299970052BBA2 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C6B112B7299970052BBA2 /* ChallengeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		BADC82D02B5F0E4C00B9A397 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		BADC82D22B5F147C00B9A397 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 		BADC82D42B5F148C00B9A397 /* HttpDogsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDogsService.swift; sourceTree = "<group>"; };
+		FF1263262B739A3A00ACFDDA /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		FF2C6B112B7299970052BBA2 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +115,11 @@
 			children = (
 				BADC82B82B5F0D5700B9A397 /* AppDelegate.swift */,
 				BADC82BA2B5F0D5700B9A397 /* SceneDelegate.swift */,
+				FF2C6B112B7299970052BBA2 /* ChallengeViewController.swift */,
 				BADC82C12B5F0D5800B9A397 /* Assets.xcassets */,
 				BADC82C32B5F0D5800B9A397 /* LaunchScreen.storyboard */,
 				BADC82C62B5F0D5800B9A397 /* Info.plist */,
+				FF1263262B739A3A00ACFDDA /* ChallengeView.swift */,
 			);
 			path = Dogs;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 				BADC82D12B5F0E4C00B9A397 /* Models.swift in Sources */,
 				BADC82CE2B5F0DC700B9A397 /* DogsService.swift in Sources */,
 				BADC82B92B5F0D5700B9A397 /* AppDelegate.swift in Sources */,
+				FF1263272B739A3A00ACFDDA /* ChallengeView.swift in Sources */,
+				FF2C6B122B7299970052BBA2 /* ChallengeViewController.swift in Sources */,
 				BADC82D52B5F148C00B9A397 /* HttpDogsService.swift in Sources */,
 				BADC82BB2B5F0D5700B9A397 /* SceneDelegate.swift in Sources */,
 			);
@@ -299,6 +307,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +340,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +492,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +519,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
