@@ -20,6 +20,10 @@
 		BADC82D52B5F148C00B9A397 /* HttpDogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC82D42B5F148C00B9A397 /* HttpDogsService.swift */; };
 		FF1263272B739A3A00ACFDDA /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1263262B739A3A00ACFDDA /* ChallengeView.swift */; };
 		FF2C6B122B7299970052BBA2 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C6B112B7299970052BBA2 /* ChallengeViewController.swift */; };
+		FF3B02A12BAC4331007F77B1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B02A02BAC4331007F77B1 /* Coordinator.swift */; };
+		FF5C61112BA065E000757B78 /* DogsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C61102BA065E000757B78 /* DogsImageView.swift */; };
+		FFB2F2E22B9C8937005E49C3 /* DogsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2F2E12B9C8937005E49C3 /* DogsCoordinator.swift */; };
+		FFB2F2E42B9C943B005E49C3 /* DogsImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2F2E32B9C943B005E49C3 /* DogsImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		BADC82D42B5F148C00B9A397 /* HttpDogsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDogsService.swift; sourceTree = "<group>"; };
 		FF1263262B739A3A00ACFDDA /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		FF2C6B112B7299970052BBA2 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		FF3B02A02BAC4331007F77B1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FF5C61102BA065E000757B78 /* DogsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsImageView.swift; sourceTree = "<group>"; };
+		FFB2F2E12B9C8937005E49C3 /* DogsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsCoordinator.swift; sourceTree = "<group>"; };
+		FFB2F2E32B9C943B005E49C3 /* DogsImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +124,14 @@
 				BADC82B82B5F0D5700B9A397 /* AppDelegate.swift */,
 				BADC82BA2B5F0D5700B9A397 /* SceneDelegate.swift */,
 				FF2C6B112B7299970052BBA2 /* ChallengeViewController.swift */,
+				FFB2F2E32B9C943B005E49C3 /* DogsImageViewController.swift */,
+				FF1263262B739A3A00ACFDDA /* ChallengeView.swift */,
+				FF5C61102BA065E000757B78 /* DogsImageView.swift */,
+				FFB2F2E12B9C8937005E49C3 /* DogsCoordinator.swift */,
+				FF3B02A02BAC4331007F77B1 /* Coordinator.swift */,
 				BADC82C12B5F0D5800B9A397 /* Assets.xcassets */,
 				BADC82C32B5F0D5800B9A397 /* LaunchScreen.storyboard */,
 				BADC82C62B5F0D5800B9A397 /* Info.plist */,
-				FF1263262B739A3A00ACFDDA /* ChallengeView.swift */,
 			);
 			path = Dogs;
 			sourceTree = "<group>";
@@ -262,13 +274,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADC82D32B5F147C00B9A397 /* Responses.swift in Sources */,
+				FFB2F2E42B9C943B005E49C3 /* DogsImageViewController.swift in Sources */,
 				BADC82D12B5F0E4C00B9A397 /* Models.swift in Sources */,
 				BADC82CE2B5F0DC700B9A397 /* DogsService.swift in Sources */,
 				BADC82B92B5F0D5700B9A397 /* AppDelegate.swift in Sources */,
+				FF5C61112BA065E000757B78 /* DogsImageView.swift in Sources */,
 				FF1263272B739A3A00ACFDDA /* ChallengeView.swift in Sources */,
 				FF2C6B122B7299970052BBA2 /* ChallengeViewController.swift in Sources */,
+				FF3B02A12BAC4331007F77B1 /* Coordinator.swift in Sources */,
 				BADC82D52B5F148C00B9A397 /* HttpDogsService.swift in Sources */,
 				BADC82BB2B5F0D5700B9A397 /* SceneDelegate.swift in Sources */,
+				FFB2F2E22B9C8937005E49C3 /* DogsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

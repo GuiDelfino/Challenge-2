@@ -14,9 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let viewController = ChallengeViewController()
-        window.rootViewController = viewController
+        let navigationController = UINavigationController()
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
+        let coordinator = DogsCoordinator(navigationController: navigationController)
+        coordinator.start()
     }
 }

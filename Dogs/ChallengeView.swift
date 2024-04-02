@@ -11,25 +11,6 @@ import DogsApi
 
 class ChallengeView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addViewsAndConstraints()
-        let service = HttpDogsService()
-                service.getBreeds { result in
-                    switch result {
-                    case .success(let breeds):
-                        self.dogsGuard = breeds
-                    case .failure(let error):
-                        break
-                    }
-                }
-
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     var dogsGuard: [Breed] = [] { didSet{
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -40,11 +21,33 @@ class ChallengeView: UIView {
     
     
     
+    
+    
+    var dogsImageGuard: [URL] = []
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addViewsAndConstraints()
+       
+
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+
+    
+    
+    
     //Criando minha tableView
     
     lazy var tableView: UITableView = {
         let tabView = UITableView()
         tabView.dataSource = self
+        tabView.delegate = self
+        tabView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tabView.translatesAutoresizingMaskIntoConstraints = false
         return tabView
     }()
@@ -71,7 +74,7 @@ class ChallengeView: UIView {
     }
 }
 
-extension ChallengeView: UITableViewDataSource {
+extension ChallengeView: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,15 +86,44 @@ extension ChallengeView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cells")
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+            fatalError()
+        }
         cell.textLabel?.text = dogsGuard[indexPath.row].name
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let navDoController = UINavigationController(rootViewController: ChallengeViewController())
+        let cellInstanciada = dogsGuard[indexPath.row].name
+        
+        let alert = UIAlertController(title: "Dogs Selecionado", message: cellInstanciada, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        navDoController.present(alert, animated: true, completion: nil)
+        
+
+        
+        
+        
+    }
+    
+
     
     
     
 }
+    
+
+    
+    
+    
+    
+    
+    
+
 
 
 
